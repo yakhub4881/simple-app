@@ -21,7 +21,7 @@ pipeline{
         stage ('Push Artifact To Nexus')
         {
             steps{
-                nexusArtifactUploader artifacts: [[artifactId: 'simple-app', classifier: '', file: 'target/simple-app-3.0.0.war', type: 'war']], credentialsId: 'nexus-admin', groupId: 'in.javahome', nexusUrl: '13.234.110.38', nexusVersion: 'nexus2', protocol: 'http', repository: 'http://13.234.110.38:8081/repository/maven-nexus-jenkins-repo/', version: '3.0.0'
+                nexusArtifactUploader artifacts: [[artifactId: 'simple-app', classifier: '', file: 'target/simple-app-3.0.0.war', type: 'war']], credentialsId: 'nexus-admin', groupId: 'in.javahome', nexusUrl: '172.31.47.172', nexusVersion: 'nexus2', protocol: 'http', repository: 'http://13.234.110.38:8081/repository/maven-nexus-jenkins-repo/', version: '3.0.0'
             }
         }
     }
